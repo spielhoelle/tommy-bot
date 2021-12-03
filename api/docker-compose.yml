@@ -5,6 +5,6 @@ services:
     image: ghcr.io/spielhoelle/telegram_bot:latest
     environment: 
       - FLASK_APP=app.py
-      - TELEGRAM_BOT_ID=bot1847508627:AAGxMVx72-X2IJip9uqwjC4Q2L0848WNI6U
+      - TELEGRAM_BOT_ID=${TELEGRAM_BOT_ID}
     ports:
       - "5000:5000"
