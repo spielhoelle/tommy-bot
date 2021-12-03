@@ -1,0 +1,1 @@
+scp -rp docker-compose.yml tf root@81.169.216.48:~/tfdocker

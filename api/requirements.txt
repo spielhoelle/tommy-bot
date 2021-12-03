@@ -1,0 +1,9 @@
+keras==2.6.0
+tensorflow==2.6.0
+Flask-Mail==0.9.1
+Flask-APScheduler==1.12.2
+flask-praetorian==1.0.0
+Flask-SQLAlchemy==2.4.4
+Werkzeug==1.0.1
+click==7.1.2
+Jinja2==2.11.2

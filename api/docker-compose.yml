@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  telegram-chatbot:
+    container_name: telegram-chatbot
+    image: ghcr.io/spielhoelle/telegram_bot:latest
+    environment: 
+      - FLASK_APP=app.py
+      - TELEGRAM_BOT_ID=bot1847508627:AAGxMVx72-X2IJip9uqwjC4Q2L0848WNI6U
+    ports:
+      - "5000:5000"

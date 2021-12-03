@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+  tfdocker:
+    container_name: tfdocker
+    image: tensorflow/tensorflow:latest-jupyter
+    ports:
+      - "8888:8888"
+    restart: always
+    volumes:
+      - ./tf:/tf
+    command: "jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --publish=8888:8888"
+    # docker run -it --rm -v $(realpath ~/notebooks):/tf -p 8888:8888 --name=tfdocker tensorflow/tensorflow:latest-jupyter  sh -c "jupyter notebook --ip='*' --port=8888 --allow-root"
+    docker run -it --rm -v $(realpath ~/notebooks):/tf -p 8888:8888 tensorflow/tensorflow:latest-jupyter
+
+  couchdb:
+    image: couchdb:latest
+    container_name: my-couchdb
+    ports:
+      - 15984:5984
+    environment:
+      - "COUCHDB_USER=admin"
+      - "COUCHDB_PASSWORD=password"
+    volumes:
+      - "couchvolume:/opt/couchdb/data"
+volumes:
+  couchvolume: null

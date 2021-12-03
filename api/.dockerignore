@@ -1,0 +1,10 @@
+.git
+.dockerignore
+models
+__pycache__
+.vscode
+.idea
+database.db
+.venv
+Dockerfile
+docker-compose.yml
